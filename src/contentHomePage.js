@@ -2,14 +2,15 @@ import chefImg from './assets/chef.jpg';
 
 export default function contentHomePage() {
     const contentContainer = document.getElementById('content');
-    
-    const heroHeader = document.createElement('h1');
-    heroHeader.innerText = 'Welkom bij Chopstick Cheff - waar Aziatische smaken tot leven komen.'
-    contentContainer.appendChild(heroHeader)
 
     const img = document.createElement('img');
     img.src = chefImg;
     contentContainer.appendChild(img);
+
+    
+    const heroHeader = document.createElement('h1');
+    heroHeader.innerText = 'Welkom bij Chopstick Cheff - waar Aziatische smaken tot leven komen.'
+    contentContainer.appendChild(heroHeader)
 
     const heroParagraph = document.createElement('p');
     heroParagraph.innerText = `Laat je meevoeren op een culinaire reis door het Verre Oosten, 
