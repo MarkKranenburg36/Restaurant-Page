@@ -1,3 +1,36 @@
+:root {
+    --color-background: #FFFCF2;
+    --color-primary: #5A0C13;
+    --color-accent: #FFF5D6;
+    --color-secondary: #36070B;
+    --color-dark: #121612;
+}
+
 body {
-    background-color: darkolivegreen;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+}
+
+nav {
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    font-family: "Cinzel", serif;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    border: none;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
 }

@@ -1,4 +1,12 @@
 import './style.css';
-import onLoadHandler from './content.js';
+import contentHomePage from './contentHomePage.js';
+import renderContentMenuPage from './contentMenuPage.js';
 
-onLoadHandler();
+window.addEventListener("load", () => {
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn.addEventListener('click', (event) => {
+        renderContentMenuPage();
+    });
+
+    contentHomePage();
+});
