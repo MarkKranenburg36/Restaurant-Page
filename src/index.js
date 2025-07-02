@@ -1,3 +1,4 @@
+import 'normalize.css';
 import './style.css';
 import contentHomePage from './contentHomePage.js';
 import renderContentMenuPage from './contentMenuPage.js';
