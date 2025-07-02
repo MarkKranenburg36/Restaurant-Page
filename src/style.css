@@ -4,6 +4,9 @@
     --color-accent: #FFF5D6;
     --color-secondary: #36070B;
     --color-dark: #121612;
+
+    --content-with: clamp(300px, 80%, 1500px);
+
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -28,7 +31,7 @@ body {
 }
 
 .contentWith {
-    width: clamp(300px, 80%, 1000px);
+    width: var(--content-with);
 }
 
 nav {
@@ -42,21 +45,40 @@ nav>h1 {
     font-size: clamp(2.4rem, 4vw, 3rem);
 }
 
-nav>#btnContainer>button {
-    font-family: "Cinzel", serif;
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    border: none;
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
-    font-weight: 700;
+nav > #btnContainer > button {
+  font-family: "Cinzel", serif;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: none;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  padding: 0.6em 1.2em;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  transition: color 0.3s ease;
 }
 
-button:hover {
-    cursor: pointer;
+nav > #btnContainer > button::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0.3em;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
 }
+
+nav > #btnContainer > button:hover::after {
+  width: 60%;
+}
+
 
 img {
     border-radius: clamp(0.5rem, 4vw, 2rem);
-    width: clamp(300px, 80vw, 1200px);
     height: clamp(300px, 50vh, 600px);
+    object-fit: cover;
+    object-position: center;
 }
