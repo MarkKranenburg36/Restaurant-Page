@@ -1,7 +1,8 @@
-import chefImg from './assets/chef.jpg';
+import chefImg from './assets/hero_img.webp';
 
 export default function contentHomePage() {
     const contentContainer = document.getElementById('content');
+    // contentContainer.classList.add('centered');
 
     const img = document.createElement('img');
     img.src = chefImg;
