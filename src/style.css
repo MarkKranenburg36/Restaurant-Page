@@ -18,7 +18,7 @@
 body {
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
     font-size: 18px;
     background-color: var(--color-background);
@@ -92,4 +92,22 @@ img {
     height: clamp(300px, 50vh, 600px);
     object-fit: cover;
     object-position: center;
+}
+
+.menuGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(0.5rem, 4vw, 2rem);
+}
+
+.menuGrid > h2 {
+    color: var(--color-dark);
+}
+
+.beefSubheader {
+    grid-column-start: 2;
+}
+
+.appetizers {
+    grid-row-start: 2;
 }
