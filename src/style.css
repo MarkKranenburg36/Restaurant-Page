@@ -5,7 +5,7 @@
     --color-secondary: #36070B;
     --color-dark: #121612;
 
-    --content-with: clamp(300px, 80%, 1500px);
+    --content-with: clamp(300px, 80%, 900px);
 
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -20,8 +20,13 @@ body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    font-size: 18px;
     background-color: var(--color-background);
     color: var(--color-primary);
+}
+
+.lineHightText {
+    line-height: 1.6;
 }
 
 .centered {
@@ -34,6 +39,11 @@ body {
     width: var(--content-with);
 }
 
+header {
+    box-shadow: rgba(54, 7, 11, 0.3) 0px 1px 4px;
+    margin-bottom: 1.2em;
+}
+
 nav {
     color: var(--color-dark);
     display: flex;
@@ -43,6 +53,7 @@ nav {
 
 nav>h1 {
     font-size: clamp(2.4rem, 4vw, 3rem);
+    margin-bottom: 0.3em;
 }
 
 nav > #btnContainer > button {

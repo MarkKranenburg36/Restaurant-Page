@@ -2,6 +2,7 @@ import chefImg from './assets/hero_img.webp';
 
 export default function renderContentHomePage() {
     const contentContainer = document.getElementById('contentContainer');
+    contentContainer.innerHTML = ``;
     contentContainer.classList.add('centered');
 
     const img = document.createElement('img');
