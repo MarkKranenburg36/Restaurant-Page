@@ -5,6 +5,7 @@ export default function renderContentMenuPage() {
 
     const menuHeader = document.createElement('h1');
     menuHeader.innerText = 'Menu';
+    contentContainer.appendChild(menuHeader);
 
     const menuContainer = document.createElement('div');
     menuContainer.classList.add('menuGrid');
@@ -18,11 +19,11 @@ export default function renderContentMenuPage() {
     }
     
 
-    const appetzersContainer = document.createElement('p');
-    appetzersContainer.classList.add('appetizers');
+    const appetizersContainer = document.createElement('div');
+    appetizersContainer.classList.add('appetizers');
     const listAppetizers = ['LOEMPIA (4 STUKS)', 'LOEMPIA MET KIP (2 STUKS)', 'KRAB WONTONS (4 STUKS)', 'CHICKEN WINGS (6 STUKS)', 'CHICKEN SATE (4 STUKS)'];
-    listAppetizers.forEach(el => appetzersContainer.appendChild(el));
-    menuContainer.appendChild(appetzersContainer);
+    appetizersContainer.innerHTML = listAppetizers.map(item => `<p>${item}</p>`).join('');
+    menuContainer.appendChild(appetizersContainer);
 
     const elements = [menuHeader, menuContainer];
     elements.forEach(el => {
