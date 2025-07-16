@@ -9,6 +9,7 @@ export default function renderContentMenuPage() {
 
     const menuContainer = document.createElement('div');
     menuContainer.classList.add('menuGrid');
+    menuContainer.classList.add('contentWith');
 
     const menuSubtitles = ['VOORGERECHTEN', 'NOEDELGERECHTEN', 'RUNDVLEESGERECHTEN'];
     for(let i = 0; i < menuSubtitles.length; i++) {
@@ -21,13 +22,13 @@ export default function renderContentMenuPage() {
 
     const appetizersContainer = document.createElement('div');
     appetizersContainer.classList.add('appetizers');
-    const listAppetizers = ['LOEMPIA (4 STUKS)', 'LOEMPIA MET KIP (2 STUKS)', 'KRAB WONTONS (4 STUKS)', 'CHICKEN WINGS (6 STUKS)', 'CHICKEN SATE (4 STUKS)'];
-    appetizersContainer.innerHTML = listAppetizers.map(item => `<p>${item}</p>`).join('');
+    appetizersContainer.classList.add('menuItemList');
+    const listAppetizers = ['LOEMPIA (4 STUKS)', '9.50', 'LOEMPIA MET KIP (2 STUKS)', '8.00', 'KRAB WONTONS (4 STUKS)', '7.00', 'CHICKEN WINGS (6 STUKS)', '9.00', 'CHICKEN SATE (4 STUKS)', '10.00'];
+    appetizersContainer.innerHTML = listAppetizers.map(el => `<p>${el}</p>`).join('');
     menuContainer.appendChild(appetizersContainer);
 
     const elements = [menuHeader, menuContainer];
     elements.forEach(el => {
-        el.classList.add('contentWidth');
         contentContainer.appendChild(el);
     });
 }

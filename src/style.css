@@ -49,41 +49,41 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: clamp(60px, 8vh, 100px);
 }
 
 nav>h1 {
     font-size: clamp(2.4rem, 4vw, 3rem);
-    margin-bottom: 0.3em;
 }
 
-nav > #btnContainer > button {
-  font-family: "Cinzel", serif;
-  background-color: var(--color-background);
-  color: var(--color-primary);
-  border: none;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  font-weight: 700;
-  padding: 0.6em 1.2em;
-  position: relative;
-  cursor: pointer;
-  background: none;
-  transition: color 0.3s ease;
+nav>#btnContainer>button {
+    font-family: "Cinzel", serif;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    border: none;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 700;
+    padding: 0.6em 1.2em;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    transition: color 0.3s ease;
 }
 
-nav > #btnContainer > button::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0.3em;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: width 0.3s ease;
+nav>#btnContainer>button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0.3em;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
 }
 
-nav > #btnContainer > button:hover::after {
-  width: 60%;
+nav>#btnContainer>button:hover::after {
+    width: 60%;
 }
 
 
@@ -97,10 +97,10 @@ img {
 .menuGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(0.5rem, 4vw, 2rem);
+    column-gap: clamp(1rem, 8vw, 4rem);
 }
 
-.menuGrid > h2 {
+.menuGrid>h2 {
     color: var(--color-dark);
 }
 
@@ -110,4 +110,13 @@ img {
 
 .appetizers {
     grid-row-start: 2;
+}
+
+.menuItemList {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+.menuItemList p:nth-child(2n) {
+    text-align: end;
 }
