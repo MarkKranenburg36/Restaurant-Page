@@ -5,8 +5,9 @@ export default function renderContentHomePage() {
     contentContainer.innerHTML = ``;
     contentContainer.classList.add('centered');
 
-    const img = document.createElement('img');
-    img.src = chefImg;
+    const heroImg = document.createElement('img');
+    heroImg.id = 'heroImg';
+    heroImg.src = chefImg;
 
     const heroHeader = document.createElement('h1');
     heroHeader.innerText = 'Welkom bij Chopstick Cheff - waar Aziatische smaken tot leven komen.'
@@ -14,7 +15,7 @@ export default function renderContentHomePage() {
     const heroParagraph = document.createElement('p');
     heroParagraph.innerText = `Laat je meevoeren op een culinaire reis door het Verre Oosten, met authentieke gerechten, moderne twist en de passie van onze chefs in elke hap. Van dampende ramen tot knapperige wokgerechten - bij Chopstick Cheff proef je de kunst van de Aziatische keuken. Pak je chopsticks erbij... en ontdek jouw nieuwe favoriete smaken.`;
 
-    const elements = [img, heroHeader, heroParagraph];
+    const elements = [heroImg, heroHeader, heroParagraph];
 
     elements.forEach(el => {
         el.classList.add('contentWith');

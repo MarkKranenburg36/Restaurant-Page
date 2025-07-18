@@ -1,0 +1,46 @@
+header {
+    box-shadow: rgba(54, 7, 11, 0.3) 0px 1px 4px;
+    margin-bottom: 1.2em;
+}
+
+nav {
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: clamp(60px, 8vh, 100px);
+}
+
+nav>h1 {
+    font-size: clamp(2.4rem, 4vw, 3rem);
+}
+
+nav>#btnContainer>button {
+    font-family: "Cinzel", serif;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    border: none;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 700;
+    padding: 0.6em 1.2em;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    transition: color 0.3s ease;
+}
+
+nav>#btnContainer>button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0.3em;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+nav>#btnContainer>button:hover::after {
+    width: 60%;
+}
