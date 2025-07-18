@@ -97,6 +97,7 @@ img {
 .menuGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 6rem auto auto auto;
     column-gap: clamp(1rem, 8vw, 4rem);
 }
 
@@ -104,12 +105,9 @@ img {
     color: var(--color-dark);
 }
 
-.beefSubheader {
+.cs-2-rs-3 {
     grid-column-start: 2;
-}
-
-.appetizers {
-    grid-row-start: 2;
+    grid-row-start: 3;
 }
 
 .menuItemList {
@@ -119,4 +117,14 @@ img {
 
 .menuItemList p:nth-child(2n) {
     text-align: end;
+}
+
+.menuItemList:nth-of-type(3n) {
+    grid-column-start: 2;
+}
+
+.menuItemList > p {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    font-weight: 700;
 }

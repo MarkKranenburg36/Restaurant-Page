@@ -15,14 +15,13 @@ export default function renderContentMenuPage() {
     for(let i = 0; i < menuSubtitles.length; i++) {
         const subtitle = document.createElement('h2');
         subtitle.innerText = menuSubtitles[i];
-        if (subtitle.innerText === 'RUNDVLEESGERECHTEN') { subtitle.classList.add('beefSubheader') }
+        if (subtitle.innerText === 'RUNDVLEESGERECHTEN') { subtitle.classList.add('cs-2-rs-3') }
         menuContainer.appendChild(subtitle);
     }
 
-    function renderItemListToMenuContainer(items, layoutClass) {
+    function renderItemListToMenuContainer(items) {
         const container = document.createElement('div');
         container.classList.add('menuItemList');
-        container.classList.add(layoutClass);
 
         container.innerHTML = items.map(el => `<p>${el}</p>`).join('');
         menuContainer.appendChild(container);
@@ -33,7 +32,7 @@ export default function renderContentMenuPage() {
         'LOEMPIA MET KIP (2 STUKS)', '8.00',
         'KRAB WONTONS (4 STUKS)', '7.00',
         'CHICKEN WINGS (6 STUKS)', '9.00',
-        'CHICKEN SATE (4 STUKS)', '10.00'
+        'CHICKEN SATE (4 STUKS)', '10.00',
     ];
 
     const listNoodleDishes = [
@@ -42,7 +41,17 @@ export default function renderContentMenuPage() {
         'NOEDELS MET GARNALEN', '12.00',
     ];
 
-    renderItemListToMenuContainer(listAppetizers, 'appetizers');
+    const listBeefDishes = [
+        'GEBAKKEN RUNDVLEES', '14.00',
+        'RUNDVLEES MET BROCCOLI', '16.00',
+        'RUNDVLEES IN ZWARTEBONENSAUS', '14.00',
+        'KUNG PAO RUNDVLEES', '15.00',
+        'BIEFSTUK VERTROSTRUN', '22.00',
+    ]
+
+    renderItemListToMenuContainer(listAppetizers);
+    renderItemListToMenuContainer(listNoodleDishes);
+    renderItemListToMenuContainer(listBeefDishes);
 
     const elements = [menuHeader, menuContainer];
     elements.forEach(el => {
